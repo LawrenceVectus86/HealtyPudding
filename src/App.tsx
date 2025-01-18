@@ -1,32 +1,41 @@
-import React from 'react';
+// import React from 'react';
 import { ShoppingBag, Truck, Gift, Facebook, Instagram, Youtube } from 'lucide-react';
+import gambar1 from './69271e443859d81cc0c8982d3220e267.jpg';
+import gambar2 from './1d2e1f1ee72db78f06f830799c90d342.jpg';
+import gambar3 from "./7bd673a2eb80429f6061ee3bac72cb97.jpg";
+import galleryImg1 from './819c542bf78e7d0ef9f64a5a7b87b114.jpg'; // Replace with actual path
+import galleryImg2 from './69271e443859d81cc0c8982d3220e267.jpg'; // Replace with actual path
+import galleryImg3 from './1e910ef11de948f5b9b7838dbd0824a8.jpg'; // Replace with actual path
+import galleryImg4 from './1.jpeg'; // Replace with actual path
+import galleryImg5 from './068e53ed48e5b0ee352a27093522069f.jpg'; // Replace with actual path
+import galleryImg6 from './1e910ef11de948f5b9b7838dbd0824a8.jpg'; // Replace with actual path
 
 function App() {
   const puddings = [
     {
       name: 'White Chocolate Bites',
       price: 'Rp 35.000',
-      image: 'https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&q=80&w=800'
+      image: gambar3
     },
     {
       name: 'Oatmeal Bites',
       price: 'Rp 32.000',
-      image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&q=80&w=800'
+      image: gambar2
     },
     {
       name: 'Jam & Poppy Seed Bites',
       price: 'Rp 38.000',
-      image: 'https://images.unsplash.com/photo-1587244141530-6b594e9c771d?auto=format&fit=crop&q=80&w=800'
+      image: gambar1
     }
   ];
 
   const gallery = [
-    'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1532499016263-f2c3e89de9cd?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=800',
-    'https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&q=80&w=800',
+    galleryImg1,
+    galleryImg2,
+    galleryImg3,
+    galleryImg4,
+    galleryImg5,
+    galleryImg6
   ];
 
   return (
@@ -60,14 +69,14 @@ function App() {
       {/* Products Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-2xl font-semibold mb-4">/ PUDDING TERBAIK</h2>
+          <h2 className="text-center text-2xl font-semibold mb-4">PUDDING TERBAIK</h2>
           <p className="text-center max-w-2xl mx-auto mb-12">
             Puding Sweeding hadir dalam berbagai varian rasa buah dan topping yang segar. Dibuat dengan bahan alami dan rendah gula untuk mendukung gaya hidup sehat Anda.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {puddings.map((pudding, index) => (
               <div key={index} className="text-center">
-                <img src={pudding.image} alt={pudding.name} className="w-full aspect-square object-cover mb-4" />
+                <img src={pudding.image} alt={pudding.name} className="w-full aspect-square object-cover mb-4"/>
                 <h3 className="font-medium mb-2">{pudding.name}</h3>
                 <p className="text-gray-600">{pudding.price}</p>
               </div>
